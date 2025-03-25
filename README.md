@@ -10,10 +10,11 @@ There are 4 different folders containing:
 
 
 - Energy calculations
-  * The LAMMPS code to perform energy calculations on the slabs
+  * The LAMMPS/Python code to perform energy calculations on the slabs
+  * An extra column containing the molecule IDs is added to the basal slab, as the full relaxation procedure was only tested out for this slab
 
 - The KMC algorithm
-  * The grid set-ups
+  * The custom grid set-up
   * The KMC code per plane and per grid
 
 - The Wulff algorithm
