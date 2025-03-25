@@ -1,5 +1,5 @@
 # Code-thesis
-This repository contains the files used within my thesis for the devlopment of the KMC algorithm for crystal growth. 
+This repository contains the files used within my thesis for the development of the KMC algorithm for ice growth from its melt. 
 There are 4 different folders containing:
 
 - Crystal structures
