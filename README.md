@@ -15,6 +15,7 @@ There are 4 different folders containing:
 
 - The KMC algorithm
   * The custom grid set-up
-  * The KMC code per plane and per grid
+  * The KMC code per plane for the custom grids and the 80x80 square grids
+  * Code to calculate the neighbors per custom grid
 
 - The Wulff algorithm
