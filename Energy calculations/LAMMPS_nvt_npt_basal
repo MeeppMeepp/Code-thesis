@@ -1,0 +1,35 @@
+units real
+boundary p p p
+dimension 3
+atom_style full
+
+
+read_data basal_slabTIP4P.lmp
+
+group central_molecule molecule 221  # Central molecule group
+group other_molecules subtract all central_molecule  # All other molecules
+minimize 1.0e-4 1.0e-4 10000 100
+fix rigid_molecules all rigid/nvt molecule temp 272 272 1000
+
+
+pair_style lj/cut/coul/long 8
+pair_coeff 1 1 0.0 1.0
+pair_coeff 1 2 0.0 1.0
+pair_coeff 1 3 0.0 1.0
+pair_coeff 2 3 0.0 1.0
+pair_coeff 3 3 0.0 1.0
+pair_coeff 2 2 0.21084 3.1668
+
+
+kspace_style ewald 1.0e-4
+compute central_energy central_molecule group/group other_molecules
+dump myDump all atom 100 dump.lammpstrj
+timestep 1
+
+thermo_style custom step c_central_energy press temp
+thermo 2
+run 20000
+
+unfix rigid_molecules
+fix rigid_molecules2 all rigid/npt molecule temp 272 272 100 iso 1 1 1000
+run 10000
