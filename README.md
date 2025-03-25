@@ -2,7 +2,7 @@
 This repository contains the files used within my thesis for the devlopment of the KMC algorithm for crystal growth. 
 There are 4 different folders containing:
 
-- The crystal structures
+- Crystal structures
   * .cif files of the hexagonal and orthogonal unit cells of Ice Ih
   * Python code to apply the TIP4P model to the structures, and a code that rotates the pyramidal slab to be upright
   * Slab structures with TIP4P applied
